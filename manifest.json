@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Submit Task",
+    "version": "1.0",
+    "description": "Automatically submits the task when timer is below 5 minutes.",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://app.outlier.ai/en/expert/tasks"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://app.outlier.ai/en/expert/tasks"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "icons": {
+        "128": "icon.png"
+    }
+}
